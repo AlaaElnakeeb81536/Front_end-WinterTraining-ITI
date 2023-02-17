@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Window</title>
+
+    <script>
+        var win = window.open("", "target", "width=150,height=150,top=");  
+        win.focus();
+       var x=50;
+       var y=50;
+        z = setInterval(function (){
+            if(!win.closed)
+                {
+                    win.moveBy(x,y);
+                    win.focus();
+                }
+        },500);
+        g = setInterval(function (){
+            if(!win.closed)
+               {
+                   x= -50;
+                   y=-50;
+               }
+       },5000)
+
+        function stop() {
+            clearInterval(z);
+            clearInterval(g);
+            x.focus();
+
+
+        }
+    </script>
+</head>
+<button type="submit" onclick="stop()"> Stop </button>
+
+<body>
+</body>
+
+</html>
