@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Calculator </title>
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .width {
+            width: 55px;
+        }
+
+        table {
+            float: left;
+            margin-right: 10px;
+        }
+
+        #td {
+            font-family: comic sans ms;
+            text-align: center;
+            color: white;
+            background-color: gray;
+            font-size: 9pt;
+        }
+
+        #ans {
+            width: 100px;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table class="calculator" border="7">
+        <tr>
+            <td colspan="4" id="td"> JavaScript Calculator </td>
+        </tr>
+        <tr>
+            <td colspan="3"> <input class="display-box" type="text" id="result" disabled /> </td>
+
+            <td> <input type="button" value="=" class="width" onclick="calculate()" id="btn" /> </td>
+            
+        </tr>
+        <tr>
+            <td> <input type="button" value="1" class="width" onclick="display('1')" /> </td>
+            <td> <input type="button" value="2" class="width" onclick="display('2')" /> </td>
+            <td> <input type="button" value="3" class="width" onclick="display('3')" /> </td>
+            <td> <input type="button" value="+" class="width" onclick="display('+')" /> </td>
+        </tr>
+        <tr>
+            <td> <input type="button" value="4" class="width" onclick="display('4')" /> </td>
+            <td> <input type="button" value="5" class="width"  onclick="display('5')" /> </td>
+            <td> <input type="button" value="6"class="width"  onclick="display('6')" /> </td>
+            <td> <input type="button" value="-"class="width"  onclick="display('-')" /> </td>
+        </tr>
+        <tr>
+            <td> <input type="button" value="7" class="width"  onclick="display('7')" /> </td>
+            <td> <input type="button" value="8" class="width"  onclick="display('8')" /> </td>
+            <td> <input type="button" value="9" class="width" onclick="display('9')" /> </td>
+            <td> <input type="button" value="*" class="width" onclick="display('*')" /> </td>
+
+        </tr>
+        <tr>
+            <td> <input type="button" value="C" class="width"  onclick="clearScreen()" id="btn" /> </td>
+            <td> <input type="button" value="0" class="width"  onclick="display('0')" /> </td>
+            <td> <input type="button" value="." class="width"  onclick="display('.')" /> </td>
+
+            
+            
+            <td> <input type="button" value="/" class="width" onclick="display('/')" /> </td>
+        </tr>
+    </table>
+
+    <script type="text/javascript" src="script.js"></script>
+
+</body>
+
+
+</html>
