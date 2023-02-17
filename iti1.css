@@ -1,0 +1,28 @@
+#form1{
+    padding-left:20px;
+    padding-bottom:20px;
+    
+}
+input{
+    border:3px solid red;
+    border-radius:3px;
+}
+p{
+    opacity:.8;
+    top:30px;
+    width:40%;
+    transition-delay:.5s;
+    transition-duration:3 s;
+
+}
+input:valid+p{
+    opacity:0;
+}
+input:valid{
+    border:3px solid cornflowerblue;
+}
+input:invalid+p{
+    opacity:1;
+    background-color:blanchedalmond;
+    width:40%;
+}
