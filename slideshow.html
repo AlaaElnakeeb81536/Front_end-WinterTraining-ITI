@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            lol
+        </title>
+    </head>
+    <body>
+        <h3>Sliding Show</h3>
+        <br>
+        <input type= "button" value="Next" id = "Next" onclick="next()">
+        <input type= "button" value="Slideshow" id = "Slideshow" onclick="slideshow()">
+        <input type= "button" value="Stop" id = "Stop" onclick="stop()">
+        <input type= "button" value="Previous" id = "Previous" onclick="previous()">
+        <br>
+        <br>
+        <img src ="1.jpg" width="400" height="300" id="img">
+
+        <script>
+            var pic=1;
+            function next(){
+                if(pic<5)
+                {
+                    pic++;
+                    document.querySelector("#img").src =(pic+".jpg");
+                   
+                }
+            }
+                                                          
+            function previous(){
+                if(pic>1)
+                {
+                    pic--;
+                    document.querySelector("#img").src =(pic+".jpg");
+                }
+            }   
+            
+            var flag = false;
+            var x;
+            
+                function slideshow(){
+                if(!flag){ 
+                    flag = true;   
+                    x = setInterval(function(){
+                    pic++;
+                    if(pic>5) {pic = 1;}
+                    document.querySelector("#img").src =(pic+".jpg");
+                    },500);
+                }
+                   
+            }
+            
+            function stop(){
+                if(flag){
+                    flag = false;
+                    clearInterval(x);
+                }
+            }
+        </script>
+    
+    </body>
+</html>
